@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Patanjali Clock</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+	
+<div class="clock">
+<!-- <div class="second"></div>
+	<div class="minute"></div>
+	<div class="hour"></div> -->
+
+</div>
+
+<script>
+	
+	var cursorX;
+var cursorY;
+document.onmousemove = function(e){
+    cursorX = e.pageX;
+    cursorY = e.pageY;
+    var x=document.createElement('div');
+
+ var random= Math.floor((Math.random() * 3) + 1); 
+ if(random==3){
+ 	x.className='second';
+ 	x.style.top=cursorY+'px';
+ 	x.style.left=cursorX+'px';
+ }
+ else if(random==10){
+ 	x.className='minute';
+
+ 	x.style.top=cursorY+'px';
+ 	x.style.left=cursorX+'px';
+ }
+ else if(random==25){
+ 	x.className='hour';
+ 	x.style.top=cursorY+'px';
+ 	x.style.left=cursorX+'px';
+ }
+document.querySelector('.clock').appendChild(x);
+	 
+ }
+
+
+// document.addEventListener('click',function(){
+   console.log(cursorY);
+    console.log(cursorX);
+//  var x=document.createElement('div');
+
+//  var random= Math.floor((Math.random() * 3) + 1); 
+//  if(random==3){
+//  		x.className='second';
+//  	x.style.top=cursorY+'px';
+//  	x.style.left=cursorX+'px';
+//  }
+//  else if(random==1){
+//  	x.className='minute';
+
+//  	x.style.top=cursorY+'px';
+//  	x.style.left=cursorX+'px';
+//  }
+//  else if(random==2){
+//  	x.className='hour';
+//  	x.style.top=cursorY+'px';
+//  	x.style.left=cursorX+'px';
+//  }
+// document.querySelector('.clock').appendChild(x);
+
+
+// });
+
+
+function x() {
+  setTimeout(
+    function() {
+    	alert('Party over guys, this thing makes your browser slow!');
+    	alert('This page will refresh now, cause "your browser needs kapalbhati!"');
+    	location.reload(); 
+    }, 20000);
+}
+
+x();
+
+</script>
+</body>
+</html>

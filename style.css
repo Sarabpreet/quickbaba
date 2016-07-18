@@ -1,0 +1,74 @@
+*{
+
+		margin:0px;
+		border:0px;
+		padding: 0px;
+	}
+body{
+	overflow: hidden;
+}
+	.clock{
+	width: 520px;
+	height: auto;
+	overflow: hidden;
+		margin:  0 auto;
+
+	}
+.second,.hour,.minute{
+	
+	position: absolute;
+}
+.second{
+	width: 118px;
+	height: 96px;
+	background:url('second.png');
+	z-index: 3;
+	top:510px;
+	right:-80px;
+	animation: second reverse linear 6s infinite;
+}
+.minute{
+	width: 310px;
+	height: 223px;
+	background:url('minute.png');
+	z-index: 2;
+	top:380px;
+	right: -30px;
+		animation: second reverse linear 30s infinite;
+}
+
+.hour{
+
+	width: 380px;
+	height: 473px;
+	background:url('hour.png');
+	z-index: 1;	
+	animation: second reverse linear 360s infinite;
+}
+
+
+
+@keyframes second{
+	
+	0%{
+		transform: rotate(0deg);
+	}
+	
+		0%{
+		transform: rotate(180deg);
+	}
+	
+		0%{
+		transform: rotate(360deg);
+	}
+	
+}
+
+
+.drop{
+	
+	
+	display: none;
+	
+}
+
